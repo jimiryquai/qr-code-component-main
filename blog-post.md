@@ -195,7 +195,7 @@ This separation means:
 
 ## What I Would Do Differently
 
-1. **Start with the style guide** - I initially guessed at colors instead of checking the provided values
+1. **Start with the style guide** - I initially mixed up the color values, putting them in the wrong variables
 2. **Plan the layout first** - Sketching the flexbox structure would have saved debugging time
 3. **Test font imports early** - Would have caught the node_modules issue sooner
 4. **Use CSS Grid** - For this layout, Grid might be even cleaner than Flexbox
