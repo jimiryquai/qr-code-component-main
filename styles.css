@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+
+:root {
+  /* Colors */
+  --color-slate-300: hsl(212.3, 44.8%, 88.6%);
+  --color-slate-500: hsl(216, 15%, 48%);
+  --color-slate-900: hsl(232.5, 43.6%, 21.6%);
+  --color-blue-500: hsl(216.4, 100%, 50.6%);
+  --color-blue-600: hsl(216.4, 95.4%, 57.6%);
+  --color-white: hsl(0, 0%, 100%);
+
+  /* Typography */
+  --font-family: "Outfit", sans-serif;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-size-body: 1rem;
+  --font-size-heading: 1.375rem;
+  --line-height-body: 1.4;
+  --line-height-heading: 1.2;
+  --letter-spacing-body: 0.0125rem;
+  --letter-spacing-heading: 0rem;
+
+  /* Spacing */
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-500: 2.5rem;
+
+  /* Border Radius */
+  --border-radius-200: 0.625rem;
+  --border-radius-400: 1.25rem;
+
+  /* Effects */
+  --shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.05);
+
+  /* Layout */
+  --width-mobile: 375px;
+  --width-desktop: 1440px;
+  --width-card: 20rem;
+}
+
+/* Minimal Modern Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: var(--line-height-body);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-slate-300, #d5e1ef);
+  padding: var(--spacing-200, 1rem);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.card {
+  width: var(--width-card, 20rem);
+  background-color: var(--color-white, #fff);
+  display: flex;
+  padding: var(--spacing-200, 1rem) var(--spacing-200, 1rem)
+    var(--spacing-500, 2.5rem) var(--spacing-200, 1rem);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-300, 1.5rem);
+  border-radius: var(--border-radius-400, 1.25rem);
+  box-shadow: var(--shadow, 0px 25px 25px 0px rgba(0, 0, 0, 0.05));
+}
+
+.card__image-bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 18rem;
+  height: 18rem;
+  background: var(--color-blue-600, #2c7dfa);
+  border-radius: var(--border-radius-200, 0.625rem);
+}
+
+.card__body {
+  display: flex;
+  padding: var(--spacing-200, 1rem);
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-200, 1rem);
+  align-self: stretch;
+}
+
+.card__heading {
+  color: var(--color-slate-900, #1f314f);
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-size: var(--font-size-heading, 1.375rem);
+  font-style: normal;
+  font-weight: var(--font-weight-bold, 700);
+  line-height: var(--line-height-heading, 1.2);
+}
+
+.card__body-text {
+  color: var(--color-slate-500, #68778d);
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+
+  font-size: var(--font-size-body, 1rem);
+  font-style: normal;
+  font-weight: var(--font-weight-normal, 400);
+  line-height: var(--line-height-body, 1.4);
+  letter-spacing: var(--letter-spacing-body, 0.0125rem);
+}
+
+/* Composition layer - Layout utilities */
+.push-last > :last-child {
+  margin-top: auto;
+}
+
+.attribution {
+  font-size: 0.75rem;
+  text-align: center;
+}
